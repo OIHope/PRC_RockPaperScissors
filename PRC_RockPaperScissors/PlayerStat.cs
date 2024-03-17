@@ -16,7 +16,7 @@ namespace PRC_RockPaperScissors
 
         public string enemyName = "";
 
-        public int countRound;
-        public int countWin;
+        public int countRound  = 10;
+        public int countWin = 6;
     }
 }
