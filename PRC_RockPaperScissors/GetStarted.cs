@@ -109,10 +109,7 @@ namespace PRC_RockPaperScissors
                     inSet = false;
                 }
                 else
-                {
-                    _Master.playerStat.plName = tempName;
                     inSet = false;
-                }
             }
 
         }

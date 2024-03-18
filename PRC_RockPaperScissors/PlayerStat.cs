@@ -15,8 +15,13 @@ namespace PRC_RockPaperScissors
         public bool watchTutorial = false;
 
         public string enemyName = "";
+        public string enemyResponce = "";
 
         public int countRound = 0;
         public int countWin = 0;
+
+        public int combatRoundCount = 1;
+        public int combatPlayerWinCount = 0;
+        public int combatEnemyWinCount = 0;
     }
 }

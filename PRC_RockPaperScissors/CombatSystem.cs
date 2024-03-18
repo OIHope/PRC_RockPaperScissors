@@ -40,72 +40,226 @@ namespace PRC_RockPaperScissors
         Random random = new Random();
         public static void Combat()
         {
-            int countRound = 0;
-            int playerCountWin = 0;
-            int enemyCountWin = 0;
+            int countRound;
+            int countPlayerWin;
+            int countEnemyWin;
+            
 
-            while ((countRound <= 2))
+
+
+            while ((_Master.playerStat.combatRoundCount <= 3)||(_Master.playerStat.combatPlayerWinCount > 1)||(_Master.playerStat.combatEnemyWinCount > 1))
             {
+                
+                string enemyWeaponID = EnemyWeaponCheck();
+                string playerWeaponID = PlayerWeaponCheck();
+                CombatCheck(playerWeaponID, enemyWeaponID);
                 
             }
         }
-        static int EnemyWeaponCheck()
+        static string EnemyWeaponCheck()
         {
-            int enemyWeaponID = 0;
+            Random rand = new Random();
+            int i = rand.Next(0, 3);
+            string enemyWeaponID = "";
+            switch (i)
+            {
+                case 0:
+                    enemyWeaponID = "rock";
+                    break;
+                case 1:
+                    enemyWeaponID = "paper";
+                    break;
+                case 2:
+                    enemyWeaponID = "scissors";
+                    break;
+            }
+            GetText.EnemyWeaponResponce(enemyWeaponID);
             return enemyWeaponID;
         }
-        static int PlayerWeaponCheck()
+        static string PlayerWeaponCheck()
         {
-            int playerWeaponID = 0;
-            return playerWeaponID;
+            string playerWEaponID = "";
+            bool temp = true;
+            while(temp)
+            {
+                Console.Clear();
+                GetInterface.AlwaysOnScreen();
+                GetInterface.CubeStart();
+                GetInterface.CombatEnemyLog();
+                GetInterface.CombatPLayerPrompt();
+                string inputKey = Console.ReadLine();
+                if (inputKey == "1")
+                {
+                    playerWEaponID = "rock";
+                    temp = false;
+                }
+                else if (inputKey == "2")
+                {
+                    playerWEaponID = "paper";
+                    temp = false;
+                }
+                else if (inputKey == "3")
+                {
+                    playerWEaponID = "scissors";
+                    temp = false;
+                }
+            }
+            
+            return playerWEaponID;
         }
-        static void RockVsRock(int playerWeaponID, int enemyWeaponID)
+        static void CombatCheck(string playerWeaponID, string enemyWeaponID)
         {
+            if ((playerWeaponID == "rock") && (enemyWeaponID == "rock"))
+                RockVsRock();
+            else if ((playerWeaponID == "rock") && (enemyWeaponID == "paper"))
+                RockVsPaper();
+            else if ((playerWeaponID == "rock") && (enemyWeaponID == "scissors"))
+                RockVsScissors();
+            else if ((playerWeaponID == "paper") && (enemyWeaponID == "rock"))
+                PaperVsRock();
+            else if ((playerWeaponID == "paper") && (enemyWeaponID == "paper"))
+                PaperVsPaper();
+            else if ((playerWeaponID == "paper") && (enemyWeaponID == "scissors"))
+                PaperVsScissors();
+            else if ((playerWeaponID == "scissors") && (enemyWeaponID == "rock"))
+                ScissorsVsRock();
+            else if ((playerWeaponID == "scissors") && (enemyWeaponID == "paper"))
+                ScissorsVsPaper();
+            else if ((playerWeaponID == "scissors") && (enemyWeaponID == "scissors"))
+                ScissorsVsScissors();
+        }
+        static void RockVsRock()
+        {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeRockRock();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundDraw();
         }
-        static void RockVsPaper(int playerWeaponID, int enemyWeaponID)
+        static void RockVsPaper()
         {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeRockPaper();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundEnemyWin();
         }
-        static void RockVsScissars(int playerWeaponID, int enemyWeaponID)
+        static void RockVsScissors()
         {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeRockScissors();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundPlayerWin();
         }
-        static void PaperVsRock(int playerWeaponID, int enemyWeaponID)
+        static void PaperVsRock()
         {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubePaperRock();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundPlayerWin();
         }
-        static void PaperVsPaper(int playerWeaponID, int enemyWeaponID)
+        static void PaperVsPaper()
         {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubePaperPaper();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundDraw();
         }
-        static void PaperVsScissars(int playerWeaponID, int enemyWeaponID)
+        static void PaperVsScissors()
         {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubePaperScissors();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundEnemyWin();
         }
-        static void ScissarsVsRock(int playerWeaponID, int enemyWeaponID)
+        static void ScissorsVsRock()
         {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeScissorsRock();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundEnemyWin();
         }
-        static void ScissarsVsPaper(int playerWeaponID, int enemyWeaponID)
+        static void ScissorsVsPaper()
         {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeScissorsPaper();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundPlayerWin();
         }
-        static void ScissarsVsScissars(int playerWeaponID, int enemyWeaponID)
+        static void ScissorsVsScissors()
         {
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeScissorsScissors();
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
+
             RoundDraw();
         }
         static void RoundPlayerWin()
         {
-            
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeWinLose();
+            GetText.Responce("win");
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            _Master.playerStat.combatRoundCount++;
+            _Master.playerStat.combatPlayerWinCount++;
+            Console.ReadKey();
         }
         static void RoundEnemyWin()
         {
-
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeLoseWin();
+            GetText.Responce("lose");
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            _Master.playerStat.combatRoundCount++;
+            _Master.playerStat.combatEnemyWinCount++;
+            Console.ReadKey();
         }
         static void RoundDraw()
         {
-
+            Console.Clear();
+            GetInterface.AlwaysOnScreen();
+            GetInterface.CubeDraw();
+            GetText.Responce("draw");
+            GetInterface.CombatEnemyLog();
+            GetInterface.CombatPLayerPromptBreak();
+            Console.ReadKey();
         }
         static void GamePlayerWin()
         {

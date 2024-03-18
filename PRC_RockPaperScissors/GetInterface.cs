@@ -108,7 +108,7 @@ namespace PRC_RockPaperScissors
                 "     Rounds Played: " + _Master.playerStat.countRound +
                 "     Wins: " + _Master.playerStat.countWin);
         }
-        public static void AlwaysOnScreen()
+        public static void AlwaysOnScreenTutorial()
         {
             Console.WriteLine("   ███╗███╗            ███╗███╗        ██████╗ ██████╗ ███████╗        ███╗███╗            ███╗███╗");
             Console.WriteLine("   ╚██║╚██║            ██╔╝██╔╝        ██╔══██╗██╔══██╗██╔════╝        ╚██║╚██║            ██╔╝██╔╝");
@@ -122,7 +122,23 @@ namespace PRC_RockPaperScissors
                 "     Rounds Played: " + _Master.playerStat.countRound +
                 "     Wins: " + _Master.playerStat.countWin + "\n");
             Console.WriteLine($" Round: (round number)");
-            Console.WriteLine($"     {_Master.playerStat.plName}: (Wins in round)          Enemy name: (wins in round)");
+            Console.WriteLine($" {_Master.playerStat.plName}: (Wins in round)                                     Enemy name: (wins in round)");
+        }
+        public static void AlwaysOnScreen()
+        {
+            Console.WriteLine("   ███╗███╗            ███╗███╗        ██████╗ ██████╗ ███████╗        ███╗███╗            ███╗███╗");
+            Console.WriteLine("   ╚██║╚██║            ██╔╝██╔╝        ██╔══██╗██╔══██╗██╔════╝        ╚██║╚██║            ██╔╝██╔╝");
+            Console.WriteLine("    ██║ ██║█████╗█████╗██║ ██║         ██████╔╝██████╔╝███████╗         ██║ ██║█████╗█████╗██║ ██║ ");
+            Console.WriteLine("    ██║ ██║╚════╝╚════╝██║ ██║         ██╔══██╗██╔═══╝ ╚════██║         ██║ ██║╚════╝╚════╝██║ ██║ ");
+            Console.WriteLine("   ███║███║            ███╗███╗        ██║  ██║██║     ███████║        ███║███║            ███╗███╗");
+            Console.WriteLine("   ╚══╝╚══╝            ╚══╝╚══╝        ╚═╝  ╚═╝╚═╝     ╚══════╝        ╚══╝╚══╝            ╚══╝╚══╝");
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------");
+            Console.WriteLine("     Player Name: " + _Master.playerStat.plName +
+                "     Player Age: " + _Master.playerStat.plAge +
+                "     Rounds Played: " + _Master.playerStat.countRound +
+                "     Wins: " + _Master.playerStat.countWin + "\n");
+            Console.WriteLine($" Round: {_Master.playerStat.combatRoundCount}");
+            Console.WriteLine($" {_Master.playerStat.plName}: {_Master.playerStat.combatPlayerWinCount}                                     {_Master.playerStat.enemyName}: {_Master.playerStat.combatEnemyWinCount}");
         }
         public static void StartAskName()
         {
@@ -295,11 +311,34 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("");
             Console.WriteLine("");
         }
-        public static void PLayerPrompt()
+        public static void CombatEnemyLog()
         {
-
+            Console.WriteLine("");
+            Console.WriteLine($"===={_Master.playerStat.enemyName} ^Log====");
+            Console.WriteLine($"{_Master.playerStat.enemyResponce}");
+            Console.WriteLine("");
         }
-
+        public static void CombatPLayerPromptBreak()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("=====PRESS ENTER=====");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+        public static void CombatPLayerPrompt()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("=====MAKE YOUR CHOICE=====");
+            Console.WriteLine("   (1) Rock   (2) Paper   (3)Scissors");
+            Console.WriteLine("");
+        }
+        public static void CombatPLayerPromptEndRound()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("=====MAKE YOUR CHOICE=====");
+            Console.WriteLine("   (1) Play again   (2) Back to Main Menu");
+            Console.WriteLine("");
+        }
         public static void CubeEmpty()
         {
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
@@ -552,7 +591,7 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
         }
-        public static void RockPaper()
+        public static void CubeRockPaper()
         {
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
             Console.WriteLine("|                                              ||                                              |");
