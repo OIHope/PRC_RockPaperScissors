@@ -34,14 +34,86 @@ namespace PRC_RockPaperScissors
         }
         public static void AskName()
         {
+            bool inSet = true;
+            while (inSet)
+            {
+                Console.Clear();
+                GetInterface.AlwaysOnScreenMenu();
+                GetInterface.StartAskName();
 
+                string tempName = Console.ReadLine();
+
+                if (tempName.Length > 21)
+                {
+                    Console.WriteLine("\n   Name should be less then 20 symbols, try again\n\n===Press Enter===");
+                    Console.ReadKey();
+                }
+                else if (string.IsNullOrEmpty(tempName))
+                {
+                    Console.WriteLine("\n   You need to write something\n\n===Press Enter===");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    _Master.playerStat.plName = tempName;
+                    inSet = false;
+                }
+            }
         }
         public static void AskAge()
         {
+            bool inSet = true;
+            while (inSet)
+            {
+                Console.Clear();
+                GetInterface.AlwaysOnScreenMenu();
+                GetInterface.StartAskAge();
+
+                bool onlyNum = int.TryParse(Console.ReadLine(), out int age);
+
+                if ((onlyNum) && (age > 100))
+                {
+                    Console.WriteLine("\n   Well, if you play this you may be a dino, realy... but no, try again\n\n===Press Enter===");
+                    Console.ReadKey();
+                }
+                else if ((onlyNum) && (age < 12))
+                {
+                    Console.Clear();
+                    GetInterface.AlwaysOnScreenMenu();
+                    GetInterface.StartAgeWrong();
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
+                else if ((onlyNum))
+                {
+                    _Master.playerStat.plAge = age;
+                    inSet = false;
+                }
+            }
 
         }
         public static void AskTutorial()
         {
+            bool inSet = true;
+            while (inSet)
+            {
+                Console.Clear();
+                GetInterface.AlwaysOnScreenMenu();
+                GetInterface.StartTutorial();
+
+                string tempName = Console.ReadLine();
+
+                if (tempName == "1")
+                {
+                    GetTutorial.StartTutorial();
+                    inSet = false;
+                }
+                else
+                {
+                    _Master.playerStat.plName = tempName;
+                    inSet = false;
+                }
+            }
 
         }
     }

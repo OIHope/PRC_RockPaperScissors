@@ -40,56 +40,58 @@ namespace PRC_RockPaperScissors
         Random random = new Random();
         public static void Combat()
         {
-            int countRound = 1;
-            int countWin = 0;
-            while ((countRound <= 3) || (countWin != 2))
+            int countRound = 0;
+            int playerCountWin = 0;
+            int enemyCountWin = 0;
+
+            while ((countRound <= 2))
             {
                 
             }
+        }
+        static int EnemyWeaponCheck()
+        {
+            int enemyWeaponID = 0;
+            return enemyWeaponID;
         }
         static int PlayerWeaponCheck()
         {
             int playerWeaponID = 0;
             return playerWeaponID;
         }
-        static int AIWeaponCheck()
-        {
-            int AIWeaponID = 0;
-            return AIWeaponID;
-        }
-        static void RockVsRock(int playerWeaponID, int AIWeaponID)
+        static void RockVsRock(int playerWeaponID, int enemyWeaponID)
         {
             RoundDraw();
         }
-        static void RockVsPaper(int playerWeaponID, int AIWeaponID)
+        static void RockVsPaper(int playerWeaponID, int enemyWeaponID)
         {
-            RoundAIWin();
+            RoundEnemyWin();
         }
-        static void RockVsScissars(int playerWeaponID, int AIWeaponID)
-        {
-            RoundPlayerWin();
-        }
-        static void PaperVsRock(int playerWeaponID, int AIWeaponID)
+        static void RockVsScissars(int playerWeaponID, int enemyWeaponID)
         {
             RoundPlayerWin();
         }
-        static void PaperVsPaper(int playerWeaponID, int AIWeaponID)
+        static void PaperVsRock(int playerWeaponID, int enemyWeaponID)
+        {
+            RoundPlayerWin();
+        }
+        static void PaperVsPaper(int playerWeaponID, int enemyWeaponID)
         {
             RoundDraw();
         }
-        static void PaperVsScissars(int playerWeaponID, int AIWeaponID)
+        static void PaperVsScissars(int playerWeaponID, int enemyWeaponID)
         {
-            RoundAIWin();
+            RoundEnemyWin();
         }
-        static void ScissarsVsRock(int playerWeaponID, int AIWeaponID)
+        static void ScissarsVsRock(int playerWeaponID, int enemyWeaponID)
         {
-            RoundAIWin();
+            RoundEnemyWin();
         }
-        static void ScissarsVsPaper(int playerWeaponID, int AIWeaponID)
+        static void ScissarsVsPaper(int playerWeaponID, int enemyWeaponID)
         {
             RoundPlayerWin();
         }
-        static void ScissarsVsScissars(int playerWeaponID, int AIWeaponID)
+        static void ScissarsVsScissars(int playerWeaponID, int enemyWeaponID)
         {
             RoundDraw();
         }
@@ -97,7 +99,7 @@ namespace PRC_RockPaperScissors
         {
             
         }
-        static void RoundAIWin()
+        static void RoundEnemyWin()
         {
 
         }

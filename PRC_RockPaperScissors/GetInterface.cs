@@ -103,9 +103,9 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("   ███║███║            ███╗███╗        ██║  ██║██║     ███████║        ███║███║            ███╗███╗");
             Console.WriteLine("   ╚══╝╚══╝            ╚══╝╚══╝        ╚═╝  ╚═╝╚═╝     ╚══════╝        ╚══╝╚══╝            ╚══╝╚══╝");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("     Player Name: " + _Master.playerStat.plName + 
-                "     Player Age: " + _Master.playerStat.plAge + 
-                "     Rounds Played: " + _Master.playerStat.countRound + 
+            Console.WriteLine("     Player Name: " + _Master.playerStat.plName +
+                "     Player Age: " + _Master.playerStat.plAge +
+                "     Rounds Played: " + _Master.playerStat.countRound +
                 "     Wins: " + _Master.playerStat.countWin);
         }
         public static void AlwaysOnScreen()
@@ -120,9 +120,52 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("     Player Name: " + _Master.playerStat.plName +
                 "     Player Age: " + _Master.playerStat.plAge +
                 "     Rounds Played: " + _Master.playerStat.countRound +
-                "     Wins: " + _Master.playerStat.countWin+"\n");
+                "     Wins: " + _Master.playerStat.countWin + "\n");
             Console.WriteLine($" Round: (round number)");
             Console.WriteLine($"     {_Master.playerStat.plName}: (Wins in round)          Enemy name: (wins in round)");
+        }
+        public static void StartAskName()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("======Write your name======");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("-----Write here----");
+        }
+        public static void StartAskAge()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("======Write your age======");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("-----Write here----");
+        }
+        public static void StartAgeWrong()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("======Write your age======");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("-----Sorry, but you are too young. Grow up kiddo----");
+        }
+        public static void StartTutorial()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("======Do you want to see a tutorial?======");
+            Console.WriteLine("");
+            Console.WriteLine("(1) Yes");
+            Console.WriteLine("(2) No");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("-----Write here----");
         }
         public static void MenuMaster()
         {
@@ -260,77 +303,355 @@ namespace PRC_RockPaperScissors
         public static void CubeEmpty()
         {
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
         }
-        public static void CubePlayerWin()
+        public static void CubeLoseWin()
         {
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|      ██╗      ██████╗ ███████╗███████╗       ||            ██╗    ██╗██╗███╗   ██╗           |");
+            Console.WriteLine("|      ██║     ██╔═══██╗██╔════╝██╔════╝       ||            ██║    ██║██║████╗  ██║           |");
+            Console.WriteLine("|      ██║     ██║   ██║███████╗█████╗         ||            ██║ █╗ ██║██║██╔██╗ ██║           |");
+            Console.WriteLine("|      ██║     ██║   ██║╚════██║██╔══╝         ||            ██║███╗██║██║██║╚██╗██║           |");
+            Console.WriteLine("|      ███████╗╚██████╔╝███████║███████╗       ||            ╚███╔███╔╝██║██║ ╚████║           |");
+            Console.WriteLine("|      ╚══════╝ ╚═════╝ ╚══════╝╚══════╝       ||             ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝           |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
         }
-        public static void CubeEnemyWin()
+        public static void CubeWinLose()
         {
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
-            Console.WriteLine("|                                             ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|            ██╗    ██╗██╗███╗   ██╗           ||      ██╗      ██████╗ ███████╗███████╗       |");
+            Console.WriteLine("|            ██║    ██║██║████╗  ██║           ||      ██║     ██╔═══██╗██╔════╝██╔════╝       |");
+            Console.WriteLine("|            ██║ █╗ ██║██║██╔██╗ ██║           ||      ██║     ██║   ██║███████╗█████╗         |");
+            Console.WriteLine("|            ██║███╗██║██║██║╚██╗██║           ||      ██║     ██║   ██║╚════██║██╔══╝         |");
+            Console.WriteLine("|            ╚███╔███╔╝██║██║ ╚████║           ||      ███████╗╚██████╔╝███████║███████╗       |");
+            Console.WriteLine("|             ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝           ||      ╚══════╝ ╚═════╝ ╚══════╝╚══════╝       |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
         }
+
+        public static void CubeDraw()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                              ██████╗ ██████╗  █████╗ ██╗    ██╗                              |");
+            Console.WriteLine("|                              ██╔══██╗██╔══██╗██╔══██╗██║    ██║                              |");
+            Console.WriteLine("|                              ██║  ██║██████╔╝███████║██║ █╗ ██║                              |");
+            Console.WriteLine("|                              ██║  ██║██╔══██╗██╔══██║██║███╗██║                              |");
+            Console.WriteLine("|                              ██████╔╝██║  ██║██║  ██║╚███╔███╔╝                              |");
+            Console.WriteLine("|                              ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝                               |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void CubeStart()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                     ▄███████▄                ||                                              |");
+            Console.WriteLine("|                   ▄███#████#██               ||                                              |");
+            Console.WriteLine("|         (1)      ████#██████#██              ||                                              |");
+            Console.WriteLine("|                   █████#██████▀              ||                   ▄▄▄▄▄▄                     |");
+            Console.WriteLine("|                     ▀██████▀                 ||                ▄██████████▄                  |");
+            Console.WriteLine("|                                              ||               ██▀        ▀██▄                |");
+            Console.WriteLine("|                      ▄████████               ||              ██           ▄██                |");
+            Console.WriteLine("|                     ██####██▀                ||               ██▄        ▄██▀                |");
+            Console.WriteLine("|         (2)         ██####██                 ||                       ▄███▀                  |");
+            Console.WriteLine("|                    ▄███#█#██                 ||                     ▄███▀                    |");
+            Console.WriteLine("|                   ████████▀                  ||                     ██▀                      |");
+            Console.WriteLine("|                  ▄▄           ▄              ||                     ██                       |");
+            Console.WriteLine("|                ▄█  █▄      ▄█▀               ||                     ██                       |");
+            Console.WriteLine("|                 ▀▀ ▀█▄  ▄██▀                 ||                     ██                       |");
+            Console.WriteLine("|         (3)           ███                    ||                                              |");
+            Console.WriteLine("|                 ▄▄ ▄█▀  ▀██▄                 ||                     ██                       |");
+            Console.WriteLine("|                ▀█  █▀      ▀█▄               ||                                              |");
+            Console.WriteLine("|                  ▀▀           ▀              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+
+        public static void CubeScissorsScissors()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|              ▄███▄▄          ▄               ||              ▄███▄▄          ▄               |");
+            Console.WriteLine("|             ███  ███       ▄█▀               ||             ███  ███       ▄█▀               |");
+            Console.WriteLine("|              ▀████▀      ▄██▀                ||              ▀████▀      ▄██▀                |");
+            Console.WriteLine("|                  ██▄   ▄██▀                  ||                  ██▄   ▄██▀                  |");
+            Console.WriteLine("|                   ███ ██▀                    ||                   ███ ██▀                    |");
+            Console.WriteLine("|                    ████                      ||                    ████                      |");
+            Console.WriteLine("|                   ███ ██▄                    ||                   ███ ██▄                    |");
+            Console.WriteLine("|                  ██▀   ▀██▄                  ||                  ██▀   ▀██▄                  |");
+            Console.WriteLine("|              ▄████▄      ▀██▄                ||              ▄████▄      ▀██▄                |");
+            Console.WriteLine("|             ███  ███       ▀█▄               ||             ███  ███       ▀█▄               |");
+            Console.WriteLine("|              ▀███▀▀          ▀               ||              ▀███▀▀          ▀               |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void CubeScissorsRock()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|              ▄███▄▄          ▄               ||                  ▄▄█████▄▄▄                  |");
+            Console.WriteLine("|             ███  ███       ▄█▀               ||             ▄████@████████████               |");
+            Console.WriteLine("|              ▀████▀      ▄██▀                ||          ▄█████@@██████████████▄             |");
+            Console.WriteLine("|                  ██▄   ▄██▀                  ||         ▄█████@█████████████████             |");
+            Console.WriteLine("|                   ███ ██▀                    ||        ▄█████@██████████████████▄            |");
+            Console.WriteLine("|                    ████                      ||        ██████@█████████████@█████            |");
+            Console.WriteLine("|                   ███ ██▄                    ||        ████████████████████@████             |");
+            Console.WriteLine("|                  ██▀   ▀██▄                  ||         ██████████@████████@███              |");
+            Console.WriteLine("|              ▄████▄      ▀██▄                ||          ██████████@██████@███▀              |");
+            Console.WriteLine("|             ███  ███       ▀█▄               ||            ▀███████@█████@████               |");
+            Console.WriteLine("|              ▀███▀▀          ▀               ||                  ▀▀█@██████▀▀                |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void CubeScissorsPaper()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|              ▄███▄▄          ▄               ||            ▐███████████████████████▌         |");
+            Console.WriteLine("|             ███  ███       ▄█▀               ||           ▄███████████████████████▀          |");
+            Console.WriteLine("|              ▀████▀      ▄██▀                ||           ███████████████████████            |");
+            Console.WriteLine("|                  ██▄   ▄██▀                  ||           ███████████████████████            |");
+            Console.WriteLine("|                   ███ ██▀                    ||           ███████████████████████            |");
+            Console.WriteLine("|                    ████                      ||           ███████████████████████            |");
+            Console.WriteLine("|                   ███ ██▄                    ||           ███████████████████████            |");
+            Console.WriteLine("|                  ██▀   ▀██▄                  ||          ▐███████████████████████            |");
+            Console.WriteLine("|              ▄████▄      ▀██▄                ||          ███████████████████████▀            |");
+            Console.WriteLine("|             ███  ███       ▀█▄               ||         ▄███████████████████████             |");
+            Console.WriteLine("|              ▀███▀▀          ▀               ||        ████████████████████████▀             |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void CubeRockScissors()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                  ▄▄█████▄▄▄                  ||              ▄███▄▄          ▄               |");
+            Console.WriteLine("|             ▄████@████████████               ||             ███  ███       ▄█▀               |");
+            Console.WriteLine("|          ▄█████@@██████████████▄             ||              ▀████▀      ▄██▀                |");
+            Console.WriteLine("|         ▄█████@█████████████████             ||                  ██▄   ▄██▀                  |");
+            Console.WriteLine("|        ▄█████@██████████████████▄            ||                   ███ ██▀                    |");
+            Console.WriteLine("|        ██████@█████████████@█████            ||                    ████                      |");
+            Console.WriteLine("|        ████████████████████@████             ||                   ███ ██▄                    |");
+            Console.WriteLine("|         ██████████@████████@███              ||                  ██▀   ▀██▄                  |");
+            Console.WriteLine("|          ██████████@██████@███▀              ||              ▄████▄      ▀██▄                |");
+            Console.WriteLine("|            ▀███████@█████@████               ||             ███  ███       ▀█▄               |");
+            Console.WriteLine("|                  ▀▀█@██████▀▀                ||              ▀███▀▀          ▀               |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void CubeRockRock()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                  ▄▄█████▄▄▄                  ||                  ▄▄█████▄▄▄                  |");
+            Console.WriteLine("|             ▄████@████████████               ||             ▄████@████████████               |");
+            Console.WriteLine("|          ▄█████@@██████████████▄             ||          ▄█████@@██████████████▄             |");
+            Console.WriteLine("|         ▄█████@█████████████████             ||         ▄█████@█████████████████             |");
+            Console.WriteLine("|        ▄█████@██████████████████▄            ||        ▄█████@██████████████████▄            |");
+            Console.WriteLine("|        ██████@█████████████@█████            ||        ██████@█████████████@█████            |");
+            Console.WriteLine("|        ████████████████████@████             ||        ████████████████████@████             |");
+            Console.WriteLine("|         ██████████@████████@███              ||         ██████████@████████@███              |");
+            Console.WriteLine("|          ██████████@██████@███▀              ||          ██████████@██████@███▀              |");
+            Console.WriteLine("|            ▀███████@█████@████               ||            ▀███████@█████@████               |");
+            Console.WriteLine("|                  ▀▀█@██████▀▀                ||                  ▀▀█@██████▀▀                |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void RockPaper()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                  ▄▄█████▄▄▄                  ||            ▐███████████████████████▌         |");
+            Console.WriteLine("|             ▄████@████████████               ||           ▄███████████████████████▀          |");
+            Console.WriteLine("|          ▄█████@@██████████████▄             ||           ███████████████████████▀           |");
+            Console.WriteLine("|         ▄█████@█████████████████             ||           ███████████████████████            |");
+            Console.WriteLine("|        ▄█████@██████████████████▄            ||           ███████████████████████            |");
+            Console.WriteLine("|        ██████@█████████████@█████            ||           ███████████████████████            |");
+            Console.WriteLine("|        ████████████████████@████             ||           ███████████████████████            |");
+            Console.WriteLine("|         ██████████@████████@███              ||          ▐███████████████████████            |");
+            Console.WriteLine("|          ██████████@██████@███▀              ||          ███████████████████████▀            |");
+            Console.WriteLine("|            ▀███████@█████@████               ||         ▄███████████████████████             |");
+            Console.WriteLine("|                  ▀▀█@██████▀▀                ||        ████████████████████████▀             |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void CubePaperScissors()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|            ▐███████████████████████▌         ||              ▄███▄▄          ▄               |");
+            Console.WriteLine("|           ▄███████████████████████▀          ||             ███  ███       ▄█▀               |");
+            Console.WriteLine("|           ███████████████████████▀           ||              ▀████▀      ▄██▀                |");
+            Console.WriteLine("|           ███████████████████████            ||                  ██▄   ▄██▀                  |");
+            Console.WriteLine("|           ███████████████████████            ||                   ███ ██▀                    |");
+            Console.WriteLine("|           ███████████████████████            ||                    ████                      |");
+            Console.WriteLine("|           ███████████████████████            ||                   ███ ██▄                    |");
+            Console.WriteLine("|          ▐███████████████████████            ||                  ██▀   ▀██▄                  |");
+            Console.WriteLine("|          ███████████████████████▀            ||              ▄████▄      ▀██▄                |");
+            Console.WriteLine("|         ▄███████████████████████             ||             ███  ███       ▀█▄               |");
+            Console.WriteLine("|        ████████████████████████▀             ||              ▀███▀▀          ▀               |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void CubePaperRock()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|            ▐███████████████████████▌         ||                  ▄▄█████▄▄▄                  |");
+            Console.WriteLine("|           ▄███████████████████████▀          ||             ▄████@████████████               |");
+            Console.WriteLine("|           ███████████████████████▀           ||          ▄█████@@██████████████▄             |");
+            Console.WriteLine("|           ███████████████████████            ||         ▄█████@█████████████████             |");
+            Console.WriteLine("|           ███████████████████████            ||        ▄█████@██████████████████▄            |");
+            Console.WriteLine("|           ███████████████████████            ||        ██████@█████████████@█████            |");
+            Console.WriteLine("|           ███████████████████████            ||        ████████████████████@████             |");
+            Console.WriteLine("|          ▐███████████████████████            ||         ██████████@████████@███              |");
+            Console.WriteLine("|          ███████████████████████▀            ||          ██████████@██████@███▀              |");
+            Console.WriteLine("|         ▄███████████████████████             ||            ▀███████@█████@████               |");
+            Console.WriteLine("|        ████████████████████████▀             ||                  ▀▀█@██████▀▀                |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+        public static void CubePaperPaper()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|            ▐███████████████████████▌         ||            ▐███████████████████████▌         |");
+            Console.WriteLine("|           ▄███████████████████████▀          ||           ▄███████████████████████▀          |");
+            Console.WriteLine("|           ███████████████████████▀           ||           ███████████████████████▀           |");
+            Console.WriteLine("|           ███████████████████████            ||           ███████████████████████            |");
+            Console.WriteLine("|           ███████████████████████            ||           ███████████████████████            |");
+            Console.WriteLine("|           ███████████████████████            ||           ███████████████████████            |");
+            Console.WriteLine("|           ███████████████████████            ||           ███████████████████████            |");
+            Console.WriteLine("|          ▐███████████████████████            ||          ▐███████████████████████            |");
+            Console.WriteLine("|          ███████████████████████▀            ||          ███████████████████████▀            |");
+            Console.WriteLine("|         ▄███████████████████████             ||         ▄███████████████████████             |");
+            Console.WriteLine("|        ████████████████████████▀             ||        ████████████████████████▀             |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
+
     }
 }

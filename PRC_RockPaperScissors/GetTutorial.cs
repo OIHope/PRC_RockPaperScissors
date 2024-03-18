@@ -22,33 +22,34 @@ namespace PRC_RockPaperScissors
             Console.Clear();
             
             GetInterface.AlwaysOnScreen();
-            Console.WriteLine("\n   Then you have battle statistics, like enemy name, how much wins and so on\n\n===Press Enter===");
+            Console.WriteLine("\n   Then you have battle statistics, like AI name, how much wins and so on\n" +
+                "And just so you know... this AI has many names, but don't get yourself fooled - it's NOT a human being!\n===Press Enter===");
             Console.ReadKey();
             Console.Clear();
 
             GetInterface.AlwaysOnScreen();
             GetInterface.CubeEmpty();
-            Console.WriteLine("\n   These are battle cubes. You will see you and enemies weapons, and who wins of loses\n\n===Press Enter===");
+            Console.WriteLine("\n   These are battle cubes. You will see your and AI`s weapons, and who wins of loses\n\n===Press Enter===");
             Console.ReadKey();
             Console.Clear();
             GetInterface.AlwaysOnScreen();
-            GetInterface.CubeEmpty();
+            GetInterface.CubeStart();
             Console.WriteLine("\n   The rules are simple: rock beets scissors, scissors beet paper and paper beets rock\n\n===Press Enter===");
             Console.ReadKey();
             Console.Clear();
             GetInterface.AlwaysOnScreen();
-            GetInterface.CubeEmpty();
+            GetInterface.CubeRockScissors();
             Console.WriteLine("\n   Battle lasts for 3 rounds or untill two wins. Draws dont count so round ends with smb win or lose\n\n===Press Enter===");
             Console.ReadKey();
             Console.Clear();
 
             GetInterface.AlwaysOnScreen();
-            GetInterface.CubeEmpty();
+            GetInterface.CubeDraw();
             Console.WriteLine("\n   A tip for you - your oponents are the worst pocker players, just so you know.\n\n===Press Enter===");
             Console.ReadKey();
             Console.Clear();
             GetInterface.AlwaysOnScreen();
-            GetInterface.CubeEmpty();
+            GetInterface.CubeStart();
             Console.WriteLine("\n   Good luck!\n\n===Press Enter===");
             Console.ReadKey();
             Console.Clear();
