@@ -6,35 +6,6 @@ using System.Threading.Tasks;
 
 namespace PRC_RockPaperScissors
 {
-    // ЩО ЗРОБИТИ!
-    //
-    // система бою передбачатиме, що гравець зможе вгадати наступний крок суперника через опис.
-    // ШІ буде завжди першим обирати "зброю", а тому виводимо повідомлення типу "Суперник дивиться на вас (прикметник\ознака) очима"
-    // або "Суперник кинув на вас (прикметник\ознака) погляд"
-    // і таким чином можна здогадатись що викине суперник. для кожного треба буде декілька схожих варіацій
-    // наприклад для ножиць: гострий погляд, посмішка з гострими зубами і тд
-    // це додасть момент скілу та знання гри, а не рандому, де можна просто затикать однією комбінацією
-
-    // інтерфейс має завжди бути зверху
-    // там буде назва гри, розлення якесь
-    // загальна статистика з іменем гравця і бла бла бла
-    // розділення і тут робимо вікно бою, яке має містити імя гравця, та імя суперника (імена останнього треба буде рандомно нагенерувати)
-    // вікно бою робимо горизонтально, два віконця, праве для гравця, ліве для суперника. віконця невеликі
-    // над віконцями  між іменами гравців будемо вести лог битви, де буде записано кть раундів
-    // над самими віконцями будемо малювати якісь символи як в МК що показуватимуть кть перемог. можливо це зробимо між віконцями, хз
-    // перша фаза бою ми показуємо у віконці суперника знак питання, бо ми не знаємо що там
-    // у віконці гравця показуємо три міні іконки каменю, паперу, ножиць і під кожним підпис типу (1) Камінь (2) Папір ...
-    // під цими віконцями у нас буде лог, де записуватимемо реакцію суперника (те що описано вище про його вибір)
-    // а також зробимо поле вибору, де вписуватимемо число щоб обрати "зброю"
-    //
-    // після того як обрали число прожимаємо ентер і у обох віконцях виводимо READY та чекаємо натиск кнопки ще раз
-    // потім вже відкриваємо хто що обрав
-    // ще раз тиснемо ентер щоб отримати результат. його вписуємо у віконця (LOSE, WIN, DRAW)
-    // нічиї за раунд не рахуються
-    //
-    //після перемоги чи програшу протискаємо ентер і отримуємо повідомлення в лог від суперника, а віконця очищаються (забагато варіацій малювати)
-    //
-    //в ідеалі робити все так, щоб консоль постійно очищалась і відмальовувалась заново, щоб все відбувалось на одному листі, а не на скатертині
     class CombatSystem
     {
         Random random = new Random();
@@ -229,28 +200,40 @@ namespace PRC_RockPaperScissors
         }
         static void RoundPlayerWin()
         {
+
             Console.Clear();
             GetInterface.AlwaysOnScreen();
             GetInterface.CubeWinLose();
             GetText.Responce("win");
             GetInterface.CombatEnemyLog();
             GetInterface.CombatPLayerPromptBreak();
-            _Master.playerStat.combatRoundCount++;
-            _Master.playerStat.combatPlayerWinCount++;
             Console.ReadKey();
+
+            if ((_Master.playerStat.combatPlayerWinCount == 2) || (_Master.playerStat.combatRoundCount == 3))
+                GamePlayerWin();
+            else
+                _Master.playerStat.combatPlayerWinCount++;
+                _Master.playerStat.combatRoundCount++;
+
         }
         static void RoundEnemyWin()
         {
+
+
             Console.Clear();
             GetInterface.AlwaysOnScreen();
             GetInterface.CubeLoseWin();
             GetText.Responce("lose");
             GetInterface.CombatEnemyLog();
             GetInterface.CombatPLayerPromptBreak();
-            _Master.playerStat.combatRoundCount++;
-            _Master.playerStat.combatEnemyWinCount++;
             Console.ReadKey();
-        }
+
+            if ((_Master.playerStat.combatEnemyWinCount ==2)||(_Master.playerStat.combatRoundCount == 3))
+                GameAIWin();
+            else
+                _Master.playerStat.combatEnemyWinCount++;
+                _Master.playerStat.combatRoundCount++;
+}
         static void RoundDraw()
         {
             Console.Clear();
@@ -263,15 +246,59 @@ namespace PRC_RockPaperScissors
         }
         static void GamePlayerWin()
         {
+            _Master.playerStat.countWin++;
+            _Master.playerStat.countRound++;
+            bool temp = true;
+            while (temp)
+            {
+                Console.Clear();
+                GetInterface.AlwaysOnScreen();
+                GetInterface.CubePlayerWin();
+                GetText.Responce("win");
+                GetInterface.CombatEnemyLog();
+                GetInterface.CombatPLayerPromptEndRound();
+                _Master.playerStat.combatRoundCount = 1;
+                _Master.playerStat.combatPlayerWinCount = 0;
 
+                string inputKey = Console.ReadLine();
+                if (inputKey == "1")
+                    temp = false;
+                else if (inputKey == "2")
+                {
+                    temp = false;
+                    Console.Clear();
+                    GetMenu.Menu();
+                }
+            }
+            
         }
         static void GameAIWin()
         {
+            _Master.playerStat.countRound++;
 
-        }
-        static void GameDraw()
-        {
+            bool temp = true;
+            while (temp)
+            {
+                Console.Clear();
+                GetInterface.AlwaysOnScreen();
+                GetInterface.CubePlayerLose();
+                GetText.Responce("lose");
+                GetInterface.CombatEnemyLog();
+                GetInterface.CombatPLayerPromptEndRound();
+                _Master.playerStat.combatRoundCount = 1;
+                _Master.playerStat.combatEnemyWinCount = 0;
 
+                string inputKey = Console.ReadLine();
+                if (inputKey == "1")
+                    temp = false;
+                else if (inputKey == "2")
+                {
+                    temp = false;
+                    Console.Clear();
+                    GetMenu.Menu();
+                }
+            }
+            
         }
     }
     
