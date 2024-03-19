@@ -236,13 +236,13 @@ namespace PRC_RockPaperScissors
             bool gameOn = true;
             if ((_Master.gameValue.combatPlayerWinCount == 2) && (_Master.gameValue.combatRoundCount <= 3))
             {
-                GetText.Responce("lose");
+                GetText.Responce("win");
                 GamePlayerWin();
                 gameOn = false;
             }
             else if ((_Master.gameValue.combatEnemyWinCount == 2) && (_Master.gameValue.combatRoundCount <= 3))
             {
-                GetText.Responce("win");
+                GetText.Responce("lose");
                 gameOn = false;
                 GameAIWin();
             }

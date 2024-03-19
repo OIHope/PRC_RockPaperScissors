@@ -144,9 +144,9 @@ namespace PRC_RockPaperScissors
                 "     Player Age: " + _Master.gameValue.plAge +
                 "     Rounds Played: " + _Master.gameValue.countRound +
                 "     Wins: " + _Master.gameValue.countWin + "\n");
-            Console.WriteLine($"██▀    Round:  Round: (round number) ▀██");
-            Console.WriteLine($"██ Player name: (Wins in round)  █████▄▄▄▄▄_______________________________________");
-            Console.WriteLine($"███▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ Enemy name: (wins in round)");
+            Console.WriteLine($"██▀                                         Round:  Round: (round number)                          ▀██\n");
+            Console.WriteLine($"      Player name: (Wins in round)");
+            Console.WriteLine($"                                                        Enemy name: (wins in round)");
         }
         public static void AlwaysOnScreen()
         {
@@ -161,9 +161,9 @@ namespace PRC_RockPaperScissors
                 "     Player Age: " + _Master.gameValue.plAge +
                 "     Rounds Played: " + _Master.gameValue.countRound +
                 "     Wins: " + _Master.gameValue.countWin + "\n");
-            Console.WriteLine($"██▀    Round: {_Master.gameValue.combatRoundCount} ▀██");
-            Console.WriteLine($"██ {_Master.gameValue.plName}: {_Master.gameValue.combatPlayerWinCount}  █████▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
-            Console.WriteLine($"████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ {_Master.gameValue.enemyName}: {_Master.gameValue.combatEnemyWinCount}\n█▀");
+            Console.WriteLine($"██▀                                         Round: {_Master.gameValue.combatRoundCount}                                         ▀██\n");
+            Console.WriteLine($"     {_Master.gameValue.plName}: {_Master.gameValue.combatPlayerWinCount}");
+            Console.WriteLine($"                                                       {_Master.gameValue.enemyName}: {_Master.gameValue.combatEnemyWinCount}\n");
         }
         public static void StartAskName()
         {

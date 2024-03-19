@@ -14,7 +14,7 @@ namespace PRC_RockPaperScissors
             Random random = new Random();
             string[] name = {"AndyWendy", "bartolomy33", "candyWeaver", "DandyCroco", "+ethanCarther+", "ferreroFartshen",
                 "gman", "heSUS", "iceBox", "jeSUS", "kontra","LEON1DAS","maydaymayday","nigiri","onlyRocks","pappa","quakeIsmyReligion",
-                "ROCK LEE","SUSuke","yeeeet","zelebobik","uolsdfljbnsd","www.rockpaperscissors.varto.com","vioria","twitch.com","nonameuser"};
+                "ROCK LEE","SUSuke","yeeeet","zelebobik","uolsdfljbnsd","vartoschool","vioria","twitch.com","nonameuser"};
             int i = random.Next(name.Length-1);
             _Master.gameValue.enemyName = name[i];
         }
