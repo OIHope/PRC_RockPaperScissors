@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace PRC_RockPaperScissors
 {
-    public class PlayerStat
+    public class GameValue
     {
         public string plName = "";
         public int plAge;
-
-        public bool canPlay = true;
-        public bool watchTutorial = false;
 
         public string enemyName = "";
         public string enemyResponce = "";

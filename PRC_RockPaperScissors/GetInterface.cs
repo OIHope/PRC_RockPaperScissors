@@ -11,28 +11,53 @@ namespace PRC_RockPaperScissors
         public static void ScreenSize()
         {
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("|           title                                                                                      |");
-            Console.WriteLine("|           t                                                                                          |");
-            Console.WriteLine("|           t                                                                                          |");
-            Console.WriteLine("|           t                                                                                          |");
-            Console.WriteLine("|           t                                                                                          |");
-            Console.WriteLine("|           t                                                                                          |");
-            Console.WriteLine("|           t                                                                                          |");
-            Console.WriteLine("|           t                                                                                          |");
-            Console.WriteLine("|        player info                                                                                   |\n");
-            Console.WriteLine("|                                           game info round                                            |");
-            Console.WriteLine("|              player name                                            enemy name                       |\n");
-            Console.WriteLine("|   ----------------------------------------------------------------------------------                 |\n\n\n\n\n\n\n\n");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|   ----------------------------------------------------------------------------------------------     |");
+            Console.WriteLine("|                                                                                                      |");
             Console.WriteLine("|                                FOR BETTER EXPERIENCE RESISE YOU WINDOW                               |");
             Console.WriteLine("|                                             TO THE LINES                                             |");
-            Console.WriteLine("|                                       OR MAKE IT FULL SCREEN                                         |\n");
-            Console.WriteLine("|                                                                                                      |\n\n\n\n\n\n\n\n");
-            Console.WriteLine("|    -------------------------------------------------------------------------------------             |\n");
-            Console.WriteLine("|          round result log                                                                            |\n");
-            Console.WriteLine("|          enemy prompt                                                                                |\n");
-            Console.WriteLine("|      ===  CHOOSE  ===                                                                                |\n");
-            Console.WriteLine("|      1 play again      2 back to menu                                                                |\n");
-            Console.WriteLine("|      player write here                                                                               |\n");
+            Console.WriteLine("|                                       OR MAKE IT FULL SCREEN                                         |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|    ---------------------------------------------------------------------------------------------     |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
+            Console.WriteLine("|                                                                                                      |");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
 
 
@@ -41,8 +66,6 @@ namespace PRC_RockPaperScissors
             Console.ReadKey();
             Console.Clear();
         }
-        //покищо це лише задум, але відтвоювати частини інтерфейсу типу тайтлу і тд можна через окремий клас
-        //наприклад щоб не створювати кожен раз методи в кожному з класів, повторювані частини інтерфейсу створювати тут
         public static void WelcomeTitle1()
         {
             Console.Clear();
@@ -103,10 +126,10 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("   ███║███║            ███╗███╗        ██║  ██║██║     ███████║        ███║███║            ███╗███╗");
             Console.WriteLine("   ╚══╝╚══╝            ╚══╝╚══╝        ╚═╝  ╚═╝╚═╝     ╚══════╝        ╚══╝╚══╝            ╚══╝╚══╝");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("     Player Name: " + _Master.playerStat.plName +
-                "     Player Age: " + _Master.playerStat.plAge +
-                "     Rounds Played: " + _Master.playerStat.countRound +
-                "     Wins: " + _Master.playerStat.countWin);
+            Console.WriteLine("     Player Name: " + _Master.gameValue.plName +
+                "     Player Age: " + _Master.gameValue.plAge +
+                "     Rounds Played: " + _Master.gameValue.countRound +
+                "     Wins: " + _Master.gameValue.countWin);
         }
         public static void AlwaysOnScreenTutorial()
         {
@@ -117,12 +140,13 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("   ███║███║            ███╗███╗        ██║  ██║██║     ███████║        ███║███║            ███╗███╗");
             Console.WriteLine("   ╚══╝╚══╝            ╚══╝╚══╝        ╚═╝  ╚═╝╚═╝     ╚══════╝        ╚══╝╚══╝            ╚══╝╚══╝");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("     Player Name: " + _Master.playerStat.plName +
-                "     Player Age: " + _Master.playerStat.plAge +
-                "     Rounds Played: " + _Master.playerStat.countRound +
-                "     Wins: " + _Master.playerStat.countWin + "\n");
-            Console.WriteLine($" Round: (round number)");
-            Console.WriteLine($" {_Master.playerStat.plName}: (Wins in round)                                     Enemy name: (wins in round)");
+            Console.WriteLine("     Player Name: " + _Master.gameValue.plName +
+                "     Player Age: " + _Master.gameValue.plAge +
+                "     Rounds Played: " + _Master.gameValue.countRound +
+                "     Wins: " + _Master.gameValue.countWin + "\n");
+            Console.WriteLine($"██▀    Round:  Round: (round number) ▀██");
+            Console.WriteLine($"██ Player name: (Wins in round)  █████▄▄▄▄▄_______________________________________");
+            Console.WriteLine($"███▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ Enemy name: (wins in round)");
         }
         public static void AlwaysOnScreen()
         {
@@ -133,12 +157,13 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("   ███║███║            ███╗███╗        ██║  ██║██║     ███████║        ███║███║            ███╗███╗");
             Console.WriteLine("   ╚══╝╚══╝            ╚══╝╚══╝        ╚═╝  ╚═╝╚═╝     ╚══════╝        ╚══╝╚══╝            ╚══╝╚══╝");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("     Player Name: " + _Master.playerStat.plName +
-                "     Player Age: " + _Master.playerStat.plAge +
-                "     Rounds Played: " + _Master.playerStat.countRound +
-                "     Wins: " + _Master.playerStat.countWin + "\n");
-            Console.WriteLine($" Round: {_Master.playerStat.combatRoundCount}");
-            Console.WriteLine($" {_Master.playerStat.plName}: {_Master.playerStat.combatPlayerWinCount}                                     {_Master.playerStat.enemyName}: {_Master.playerStat.combatEnemyWinCount}");
+            Console.WriteLine("     Player Name: " + _Master.gameValue.plName +
+                "     Player Age: " + _Master.gameValue.plAge +
+                "     Rounds Played: " + _Master.gameValue.countRound +
+                "     Wins: " + _Master.gameValue.countWin + "\n");
+            Console.WriteLine($"██▀    Round: {_Master.gameValue.combatRoundCount} ▀██");
+            Console.WriteLine($"██ {_Master.gameValue.plName}: {_Master.gameValue.combatPlayerWinCount}  █████▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+            Console.WriteLine($"████▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ {_Master.gameValue.enemyName}: {_Master.gameValue.combatEnemyWinCount}\n█▀");
         }
         public static void StartAskName()
         {
@@ -204,11 +229,11 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("======Main Menu======");
+            Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("So the battle begins!");
             Console.WriteLine("");
-            Console.WriteLine($"Your opponent will be: {_Master.playerStat.enemyName}");
+            Console.WriteLine($"Your opponent will be: {_Master.gameValue.enemyName}");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("=====Press Enter=====");
@@ -220,7 +245,7 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("======Main Menu======");
+            Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("======Settings");
             Console.WriteLine("");
@@ -229,14 +254,14 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("");
             Console.WriteLine("(4) Go back");
             Console.WriteLine("");
-            Console.WriteLine("-----Write here----");
+            Console.WriteLine("-----Write here----\n");
         }
         public static void MenuChangeName()
         {
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("======Main Menu======");
+            Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("======Change Name");
             Console.WriteLine("");
@@ -245,14 +270,14 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("-----Write here----");
+            Console.WriteLine("-----Write here----\n");
         }
         public static void MenuChangedName()
         {
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("======Main Menu======");
+            Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("=Your name is changed");
             Console.WriteLine("");
@@ -261,23 +286,23 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("-----Press Enter----");
+            Console.WriteLine("-----Press Enter----\n");
         }
         public static void MenuClearStat()
         {
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("======Main Menu======");
+            Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("=Your statistics is cleared");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("(4) Go back");
             Console.WriteLine("");
-            Console.WriteLine("-----Write here----");
+            Console.WriteLine("");
+            Console.WriteLine("-----Press Enter----\n");
         }
         public static void MenuYesNo()
         {
@@ -293,7 +318,7 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("-----Write here----");
+            Console.WriteLine("-----Write here----\n");
         }
         public static void MenuWeWillMissYou()
         {
@@ -309,13 +334,13 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine("-----Press Enter----");
         }
         public static void CombatEnemyLog()
         {
             Console.WriteLine("");
-            Console.WriteLine($"===={_Master.playerStat.enemyName} ^Log====");
-            Console.WriteLine($"{_Master.playerStat.enemyResponce}");
+            Console.WriteLine($"===={_Master.gameValue.enemyName} Log====\n");
+            Console.WriteLine($"{_Master.gameValue.enemyResponce}");
             Console.WriteLine("");
         }
         public static void CombatPLayerPromptBreak()
@@ -445,19 +470,19 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("|                                              ||                                              |");
-            Console.WriteLine("|                        ██████╗ ██╗      █████╗ ██╗   ██╗███████╗██████╗                      |");
-            Console.WriteLine("|                        ██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗                     |");
-            Console.WriteLine("|                        ██████╔╝██║     ███████║ ╚████╔╝ █████╗  ██████╔╝                     |");
-            Console.WriteLine("|                        ██╔═══╝ ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗                     |");
-            Console.WriteLine("|                        ██║     ███████╗██║  ██║   ██║   ███████╗██║  ██║                     |");
-            Console.WriteLine("|                        ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝                     |");
+            Console.WriteLine("|                       ██████╗ ██╗      █████╗ ██╗   ██╗███████╗██████╗                       |");
+            Console.WriteLine("|                       ██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗                      |");
+            Console.WriteLine("|                       ██████╔╝██║     ███████║ ╚████╔╝ █████╗  ██████╔╝                      |");
+            Console.WriteLine("|                       ██╔═══╝ ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗                      |");
+            Console.WriteLine("|                       ██║     ███████╗██║  ██║   ██║   ███████╗██║  ██║                      |");
+            Console.WriteLine("|                       ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝                      |");
             Console.WriteLine("|                                              ||                                              |");
-            Console.WriteLine("|                                ██╗      ██████╗ ███████╗███████╗                             |");
-            Console.WriteLine("|                                ██║     ██╔═══██╗██╔════╝██╔════╝                             |");
-            Console.WriteLine("|                                ██║     ██║   ██║███████╗█████╗                               |");
-            Console.WriteLine("|                                ██║     ██║   ██║╚════██║██╔══╝                               |");
-            Console.WriteLine("|                                ███████╗╚██████╔╝███████║███████╗                             |");
-            Console.WriteLine("|                                ╚══════╝ ╚═════╝ ╚══════╝╚══════╝                             |");
+            Console.WriteLine("|                               ██╗      ██████╗ ███████╗███████╗                              |");
+            Console.WriteLine("|                               ██║     ██╔═══██╗██╔════╝██╔════╝                              |");
+            Console.WriteLine("|                               ██║     ██║   ██║███████╗█████╗                                |");
+            Console.WriteLine("|                               ██║     ██║   ██║╚════██║██╔══╝                                |");
+            Console.WriteLine("|                               ███████╗╚██████╔╝███████║███████╗                              |");
+            Console.WriteLine("|                               ╚══════╝ ╚═════╝ ╚══════╝╚══════╝                              |");
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("|                                              ||                                              |");
@@ -470,19 +495,19 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("|                                              ||                                              |");
-            Console.WriteLine("|                        ██████╗ ██╗      █████╗ ██╗   ██╗███████╗██████╗                      |");
-            Console.WriteLine("|                        ██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗                     |");
-            Console.WriteLine("|                        ██████╔╝██║     ███████║ ╚████╔╝ █████╗  ██████╔╝                     |");
-            Console.WriteLine("|                        ██╔═══╝ ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗                     |");
-            Console.WriteLine("|                        ██║     ███████╗██║  ██║   ██║   ███████╗██║  ██║                     |");
-            Console.WriteLine("|                        ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝                     |");
-            Console.WriteLine("|                                              ||                                              |");
-            Console.WriteLine("|                                    ██╗    ██╗██╗███╗   ██╗                                   |");
-            Console.WriteLine("|                                    ██║    ██║██║████╗  ██║                                   |");
-            Console.WriteLine("|                                    ██║ █╗ ██║██║██╔██╗ ██║                                   |");
-            Console.WriteLine("|                                    ██║███╗██║██║██║╚██╗██║                                   |");
-            Console.WriteLine("|                                    ╚███╔███╔╝██║██║ ╚████║                                   |");
-            Console.WriteLine("|                                     ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝                                   |");
+            Console.WriteLine("|                       ██████╗ ██╗      █████╗ ██╗   ██╗███████╗██████╗                       |");
+            Console.WriteLine("|                       ██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝██╔════╝██╔══██╗                      |");
+            Console.WriteLine("|                       ██████╔╝██║     ███████║ ╚████╔╝ █████╗  ██████╔╝                      |");
+            Console.WriteLine("|                       ██╔═══╝ ██║     ██╔══██║  ╚██╔╝  ██╔══╝  ██╔══██╗                      |");
+            Console.WriteLine("|                       ██║     ███████╗██║  ██║   ██║   ███████╗██║  ██║                      |");
+            Console.WriteLine("|                       ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝                      |");
+            Console.WriteLine("|                                             ||                                               |");
+            Console.WriteLine("|                                   ██╗    ██╗██╗███╗   ██╗                                    |");
+            Console.WriteLine("|                                   ██║    ██║██║████╗  ██║                                    |");
+            Console.WriteLine("|                                   ██║ █╗ ██║██║██╔██╗ ██║                                    |");
+            Console.WriteLine("|                                   ██║███╗██║██║██║╚██╗██║                                    |");
+            Console.WriteLine("|                                   ╚███╔███╔╝██║██║ ╚████║                                    |");
+            Console.WriteLine("|                                    ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝                                    |");
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("|                                              ||                                              |");

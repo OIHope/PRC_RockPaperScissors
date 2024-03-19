@@ -11,20 +11,14 @@ namespace PRC_RockPaperScissors
         Random random = new Random();
         public static void Combat()
         {
-            int countRound;
-            int countPlayerWin;
-            int countEnemyWin;
-            
+            CombatStatClear();
 
-
-
-            while ((_Master.playerStat.combatRoundCount <= 3)||(_Master.playerStat.combatPlayerWinCount > 1)||(_Master.playerStat.combatEnemyWinCount > 1))
+            bool inGame = true;
+            while (inGame)
             {
-                
                 string enemyWeaponID = EnemyWeaponCheck();
                 string playerWeaponID = PlayerWeaponCheck();
-                CombatCheck(playerWeaponID, enemyWeaponID);
-                
+                CombatCheck(playerWeaponID, enemyWeaponID);   
             }
         }
         static string EnemyWeaponCheck()
@@ -201,38 +195,31 @@ namespace PRC_RockPaperScissors
         static void RoundPlayerWin()
         {
 
+            _Master.gameValue.combatPlayerWinCount++;
+            GetText.Responce("win");
+
             Console.Clear();
             GetInterface.AlwaysOnScreen();
             GetInterface.CubeWinLose();
-            GetText.Responce("win");
             GetInterface.CombatEnemyLog();
             GetInterface.CombatPLayerPromptBreak();
             Console.ReadKey();
 
-            if ((_Master.playerStat.combatPlayerWinCount == 2) || (_Master.playerStat.combatRoundCount == 3))
-                GamePlayerWin();
-            else
-                _Master.playerStat.combatPlayerWinCount++;
-                _Master.playerStat.combatRoundCount++;
-
+            WinnerCheck();
         }
         static void RoundEnemyWin()
         {
-
+            _Master.gameValue.combatEnemyWinCount++;
+            GetText.Responce("lose");
 
             Console.Clear();
             GetInterface.AlwaysOnScreen();
             GetInterface.CubeLoseWin();
-            GetText.Responce("lose");
             GetInterface.CombatEnemyLog();
             GetInterface.CombatPLayerPromptBreak();
             Console.ReadKey();
 
-            if ((_Master.playerStat.combatEnemyWinCount ==2)||(_Master.playerStat.combatRoundCount == 3))
-                GameAIWin();
-            else
-                _Master.playerStat.combatEnemyWinCount++;
-                _Master.playerStat.combatRoundCount++;
+            WinnerCheck();
 }
         static void RoundDraw()
         {
@@ -244,21 +231,37 @@ namespace PRC_RockPaperScissors
             GetInterface.CombatPLayerPromptBreak();
             Console.ReadKey();
         }
+        static void WinnerCheck()
+        {
+            bool gameOn = true;
+            if ((_Master.gameValue.combatPlayerWinCount == 2) && (_Master.gameValue.combatRoundCount <= 3))
+            {
+                GetText.Responce("lose");
+                GamePlayerWin();
+                gameOn = false;
+            }
+            else if ((_Master.gameValue.combatEnemyWinCount == 2) && (_Master.gameValue.combatRoundCount <= 3))
+            {
+                GetText.Responce("win");
+                gameOn = false;
+                GameAIWin();
+            }
+            if (gameOn)
+                _Master.gameValue.combatRoundCount++;
+        }
         static void GamePlayerWin()
         {
-            _Master.playerStat.countWin++;
-            _Master.playerStat.countRound++;
+            _Master.gameValue.countWin++;
+            _Master.gameValue.countRound++;
+
             bool temp = true;
             while (temp)
             {
                 Console.Clear();
                 GetInterface.AlwaysOnScreen();
                 GetInterface.CubePlayerWin();
-                GetText.Responce("win");
                 GetInterface.CombatEnemyLog();
                 GetInterface.CombatPLayerPromptEndRound();
-                _Master.playerStat.combatRoundCount = 1;
-                _Master.playerStat.combatPlayerWinCount = 0;
 
                 string inputKey = Console.ReadLine();
                 if (inputKey == "1")
@@ -266,15 +269,18 @@ namespace PRC_RockPaperScissors
                 else if (inputKey == "2")
                 {
                     temp = false;
+                    CombatStatClear();
                     Console.Clear();
                     GetMenu.Menu();
                 }
             }
-            
+            CombatStatClear();
+
         }
         static void GameAIWin()
         {
-            _Master.playerStat.countRound++;
+
+            _Master.gameValue.countRound++;
 
             bool temp = true;
             while (temp)
@@ -282,11 +288,8 @@ namespace PRC_RockPaperScissors
                 Console.Clear();
                 GetInterface.AlwaysOnScreen();
                 GetInterface.CubePlayerLose();
-                GetText.Responce("lose");
                 GetInterface.CombatEnemyLog();
                 GetInterface.CombatPLayerPromptEndRound();
-                _Master.playerStat.combatRoundCount = 1;
-                _Master.playerStat.combatEnemyWinCount = 0;
 
                 string inputKey = Console.ReadLine();
                 if (inputKey == "1")
@@ -294,11 +297,19 @@ namespace PRC_RockPaperScissors
                 else if (inputKey == "2")
                 {
                     temp = false;
+                    CombatStatClear();
                     Console.Clear();
                     GetMenu.Menu();
                 }
             }
-            
+            CombatStatClear();
+
+        }
+        static void CombatStatClear()
+        {
+            _Master.gameValue.combatPlayerWinCount = 0;
+            _Master.gameValue.combatEnemyWinCount = 0;
+            _Master.gameValue.combatRoundCount = 1;
         }
     }
     

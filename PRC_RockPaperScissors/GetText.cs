@@ -16,7 +16,7 @@ namespace PRC_RockPaperScissors
                 "gman", "heSUS", "iceBox", "jeSUS", "kontra","LEON1DAS","maydaymayday","nigiri","onlyRocks","pappa","quakeIsmyReligion",
                 "ROCK LEE","SUSuke","yeeeet","zelebobik","uolsdfljbnsd","www.rockpaperscissors.varto.com","vioria","twitch.com","nonameuser"};
             int i = random.Next(name.Length-1);
-            _Master.playerStat.enemyName = name[i];
+            _Master.gameValue.enemyName = name[i];
         }
         public static void EnemyWeaponResponce(string enemyWeaponID)
         {
@@ -65,11 +65,11 @@ namespace PRC_RockPaperScissors
             };
 
             if (i == "rock")
-                _Master.playerStat.enemyResponce = rock[j];
+                _Master.gameValue.enemyResponce = rock[j];
             else if (i == "paper")
-                _Master.playerStat.enemyResponce = paper[j];
+                _Master.gameValue.enemyResponce = paper[j];
             else if(i == "scissors")
-                _Master.playerStat.enemyResponce = scissors[j];
+                _Master.gameValue.enemyResponce = scissors[j];
         }
         public static void Responce(string roundEnd)
         {
@@ -131,13 +131,13 @@ namespace PRC_RockPaperScissors
                 "Hi there! Let's have a friendly match!"
             };
             if (i == "win")
-                _Master.playerStat.enemyResponce = responceWin[j];
+                _Master.gameValue.enemyResponce = responceWin[j];
             else if (i == "lose")
-                _Master.playerStat.enemyResponce = responceLose[j];
+                _Master.gameValue.enemyResponce = responceLose[j];
             else if (i == "draw")
-                _Master.playerStat.enemyResponce = responceDraw[j];
+                _Master.gameValue.enemyResponce = responceDraw[j];
             else if (i == "start")
-                _Master.playerStat.enemyResponce = responceStart[j];
+                _Master.gameValue.enemyResponce = responceStart[j];
         }
     }
 }

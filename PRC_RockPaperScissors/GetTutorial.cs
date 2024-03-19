@@ -23,7 +23,7 @@ namespace PRC_RockPaperScissors
             
             GetInterface.AlwaysOnScreenTutorial();
             Console.WriteLine("\n   Then you have battle statistics, like AI name, how much wins and so on\n" +
-                "And just so you know... this AI has many names, but don't get yourself fooled - it's NOT a human being!\n===Press Enter===");
+                "And just so you know... this AI has many names, but don't get yourself fooled - it's NOT a human being!\n\n===Press Enter===");
             Console.ReadKey();
             Console.Clear();
 
