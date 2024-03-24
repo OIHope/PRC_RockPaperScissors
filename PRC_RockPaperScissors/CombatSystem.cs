@@ -229,22 +229,54 @@ namespace PRC_RockPaperScissors
             GetText.Responce("draw");
             GetInterface.CombatEnemyLog();
             GetInterface.CombatPLayerPromptBreak();
+            _Master.gameValue.combatDrawCount++;
             Console.ReadKey();
+
+            WinnerCheck();
         }
         static void WinnerCheck()
         {
             bool gameOn = true;
-            if ((_Master.gameValue.combatPlayerWinCount == 2) && (_Master.gameValue.combatRoundCount <= 3))
+
+            if (_Master.gameValue.combatRoundCount == 1)
+                gameOn = true;
+            if (_Master.gameValue.combatRoundCount == 2)
             {
-                GetText.Responce("win");
-                GamePlayerWin();
-                gameOn = false;
+                if (_Master.gameValue.combatPlayerWinCount == 2)
+                {
+                    GetText.Responce("win");
+                    gameOn = false;
+                    GamePlayerWin();
+                }
+                else if (_Master.gameValue.combatEnemyWinCount == 2)
+                {
+                    GetText.Responce("lose");
+                    gameOn = false;
+                    GameAIWin();
+                }
+                else
+                    gameOn = true;
             }
-            else if ((_Master.gameValue.combatEnemyWinCount == 2) && (_Master.gameValue.combatRoundCount <= 3))
+            if (_Master.gameValue.combatRoundCount == 3)
             {
-                GetText.Responce("lose");
-                gameOn = false;
-                GameAIWin();
+                if (_Master.gameValue.combatPlayerWinCount > _Master.gameValue.combatEnemyWinCount)
+                {
+                    GetText.Responce("win");
+                    gameOn = false;
+                    GamePlayerWin();
+                }
+                else if (_Master.gameValue.combatEnemyWinCount > _Master.gameValue.combatPlayerWinCount)
+                {
+                    GetText.Responce("lose");
+                    gameOn = false;
+                    GameAIWin();
+                }
+                else if (_Master.gameValue.combatPlayerWinCount == _Master.gameValue.combatEnemyWinCount)
+                {
+                    GetText.Responce("draw");
+                    gameOn = false;
+                    GameDraw();
+                }
             }
             if (gameOn)
                 _Master.gameValue.combatRoundCount++;
@@ -303,13 +335,40 @@ namespace PRC_RockPaperScissors
                 }
             }
             CombatStatClear();
+        }
+        static void GameDraw()
+        {
 
+            _Master.gameValue.countRound++;
+
+            bool temp = true;
+            while (temp)
+            {
+                Console.Clear();
+                GetInterface.AlwaysOnScreen();
+                GetInterface.CubeGameDraw();
+                GetInterface.CombatEnemyLog();
+                GetInterface.CombatPLayerPromptEndRound();
+
+                string inputKey = Console.ReadLine();
+                if (inputKey == "1")
+                    temp = false;
+                else if (inputKey == "2")
+                {
+                    temp = false;
+                    CombatStatClear();
+                    Console.Clear();
+                    GetMenu.Menu();
+                }
+            }
+            CombatStatClear();
         }
         static void CombatStatClear()
         {
             _Master.gameValue.combatPlayerWinCount = 0;
             _Master.gameValue.combatEnemyWinCount = 0;
             _Master.gameValue.combatRoundCount = 1;
+            _Master.gameValue.combatDrawCount = 0;
         }
     }
     

@@ -464,6 +464,31 @@ namespace PRC_RockPaperScissors
             Console.WriteLine("|                                              ||                                              |");
             Console.WriteLine("-----------------------------------------------------------------------------------------------");
         }
+        public static void CubeGameDraw()
+        {
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                              ██████╗  █████╗ ███╗   ███╗███████╗                             |");
+            Console.WriteLine("|                             ██╔════╝ ██╔══██╗████╗ ████║██╔════╝                             |");
+            Console.WriteLine("|                             ██║  ███╗███████║██╔████╔██║█████╗                               |");
+            Console.WriteLine("|                             ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝                               |");
+            Console.WriteLine("|                             ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗                             |");
+            Console.WriteLine("|                              ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝                             |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                              ██████╗ ██████╗  █████╗ ██╗    ██╗                              |");
+            Console.WriteLine("|                              ██╔══██╗██╔══██╗██╔══██╗██║    ██║                              |");
+            Console.WriteLine("|                              ██║  ██║██████╔╝███████║██║ █╗ ██║                              |");
+            Console.WriteLine("|                              ██║  ██║██╔══██╗██╔══██║██║███╗██║                              |");
+            Console.WriteLine("|                              ██████╔╝██║  ██║██║  ██║╚███╔███╔╝                              |");
+            Console.WriteLine("|                              ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝                               |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("|                                              ||                                              |");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------");
+        }
         public static void CubePlayerLose()
         {
             Console.WriteLine("-----------------------------------------------------------------------------------------------");

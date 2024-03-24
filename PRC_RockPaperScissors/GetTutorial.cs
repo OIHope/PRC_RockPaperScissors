@@ -39,7 +39,7 @@ namespace PRC_RockPaperScissors
             Console.Clear();
             GetInterface.AlwaysOnScreenTutorial();
             GetInterface.CubeRockScissors();
-            Console.WriteLine("\n   Battle lasts for 3 rounds or untill two wins. Draws dont count so round ends with smb win or lose\n\n===Press Enter===");
+            Console.WriteLine("\n   Battle lasts for 3 rounds or untill two wins. Draws DO count\n\n===Press Enter===");
             Console.ReadKey();
             Console.Clear();
 

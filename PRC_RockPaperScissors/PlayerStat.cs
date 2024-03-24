@@ -20,5 +20,6 @@ namespace PRC_RockPaperScissors
         public int combatRoundCount = 1;
         public int combatPlayerWinCount = 0;
         public int combatEnemyWinCount = 0;
+        public int combatDrawCount = 0;
     }
 }
